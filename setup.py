@@ -63,7 +63,7 @@ def setup_installer_dependencies():
         install_requires.append('SQLAlchemy>=0.8.0')
 
     if subprocess.call(["which", "pg_config"]) >= 0:
-        install_requires.append('psycopg2>=2.6')
+        install_requires.append('psycopg2>=2.7')
 
     if subprocess.call(["which", "mysql_config"]) >= 0:
         install_requires.append('MySQL-python>=1.2.5')
@@ -99,7 +99,7 @@ def find_package_data(dirname):
     return [path.replace(dirname, "") for path in items]
 
 create_manifest_file()
-setup_installer_dependencies()
+#setup_installer_dependencies()
 
 setup(
     name="pegasus-wms",
